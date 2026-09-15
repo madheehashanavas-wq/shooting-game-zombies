@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zombie Assault</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- GAME SCREEN -->
+    <div id="game">
+
+        <!-- HUD -->
+        <div id="hud">
+
+            <!-- Health -->
+            <div id="health-container">
+                <div id="health-text">HEALTH</div>
+
+                <div id="health-bar">
+                    <div id="health-fill"></div>
+                </div>
+
+                <div id="health-number">100</div>
+            </div>
+
+            <!-- Weapon -->
+            <div id="weapon-info">
+                <div id="weapon-name">ASSAULT RIFLE</div>
+                <div id="ammo">30 / 120</div>
+            </div>
+
+            <!-- Crosshair -->
+            <div id="crosshair">
+                <div class="crosshair-line vertical"></div>
+                <div class="crosshair-line horizontal"></div>
+            </div>
+
+            <!-- Floor -->
+            <div id="floor-info">
+                FLOOR <span id="floor-number">1</span>
+            </div>
+
+        </div>
+
+        <!-- START SCREEN -->
+        <div id="start-screen">
+
+            <h1>ZOMBIE ASSAULT</h1>
+
+            <p>Survive the zombie outbreak.</p>
+
+            <button id="start-button">
+                START GAME
+            </button>
+
+            <div id="controls">
+                <p><b>W A S D</b> — Move</p>
+                <p><b>Mouse</b> — Aim</p>
+                <p><b>Left Click</b> — Shoot</p>
+                <p><b>1 - 4</b> — Change Weapon</p>
+                <p><b>R</b> — Reload</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- THREE.JS -->
+    <script type="module">
+        import * as THREE from
+        "https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js";
+
+        window.THREE = THREE;
+    </script>
+
+    <!-- OUR GAME -->
+    <script type="module" src="game.js"></script>
+
+</body>
+</html>
